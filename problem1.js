@@ -17,9 +17,9 @@ function calculateMoney(ticketSale ){
 
 const result= calculateMoney(10); /* Sample input 10 */
 console.log("Today's total revenue is", result);
-const result1= calculateMoney(1055); /* Sample input 1055 */
-console.log("Today's total revenue is", result1);
-const result2= calculateMoney(93); /* Sample input 93 */
-console.log("Today's total revenue is", result2);
-const result3= calculateMoney(-130); /* Sample input -130 */
-console.log(result3)
+// const result1= calculateMoney(1055); /* Sample input 1055 */
+// console.log("Today's total revenue is", result1);
+// const result2= calculateMoney(93); /* Sample input 93 */
+// console.log("Today's total revenue is", result2);
+// const result3= calculateMoney(-130); /* Sample input -130 */
+// console.log(result3)
