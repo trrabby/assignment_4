@@ -13,8 +13,7 @@ function calculateMoney(ticketSale ){
         return revenue;
     }
     
-}
-
+}   
 
 function checkName(name) {
     if (typeof name === "string"){
@@ -34,58 +33,60 @@ function checkName(name) {
     else if(typeof name === "number" || typeof name === "object" ){
         return("Please insert a name. Which must be a string.");
     }
+   
+   
     }
-
-
-
-function deleteInvalids(array) {
     
+function deleteInvalids(arrayNames) {
+        let sortedArray=[];   
+        
+        if(Array.isArray(arrayNames)===true){
+            let newArray = arrayNames.filter(value => !Number.isNaN(value))
+            newArray= newArray.filter(sortedArray=> {return sortedArray !== null;})
     
-    if(Array.isArray(arrayNames)===true){
-        let newArray = arrayNames.filter(value => !Number.isNaN(value))
-        newArray= newArray.filter(sortedArray=> {return sortedArray !== null;})
-
-        for (const sigment of newArray){
-    
-            if (typeof sigment=== "number"){
-                sortedArray.push(sigment);
+            for (const sigment of newArray){
+        
+                if (typeof sigment=== "number"){
+                    sortedArray.push(sigment);
+                }
+                
             }
-            
+            return sortedArray
         }
-        return sortedArray
-    }
-    else{
-        return("Invalid Array. Provide an Array")
-    }
-
-
-    }
+        else{
+            return("Invalid Array. Provide an Array")
+        }
     
+        }    
 
 function password(obj) {
 
-        const objLength= Object.keys(input).length
-        const ageString= input.birthYear.toString();
-        const ageLength= ageString.length
-        if (ageLength===4 && objLength===3){
-            const passwordMaking= input.siteName + "#" + input.name + "@" + input.birthYear
-            return passwordMaking
-        }
-        else{
-            return ("Invalid. Pl fill up inputs carefully")
-        }
+            const objLength = Object.keys(obj).length
+            const ageString = obj.birthYear.toString();
+            const ageLength = ageString.length
+            // const SiteNameWord= obj.siteName.split('');
+            // const upCaseSiteNameWord= SiteNameWord[0].toUpperCase();
+            const SiteNameWord = obj.siteName.charAt(0);
+            const upCaseSiteNameWord = SiteNameWord.toUpperCase();
+            const textReplace = obj.siteName.replace(SiteNameWord, upCaseSiteNameWord);
         
-        }    
-
-
-
+            if (ageLength === 4 && objLength === 3) {
+                const passwordMaking = textReplace + "#" + obj.name + "@" + obj.birthYear
+                return passwordMaking
+            }
+            else {
+                return ("Invalid. Pl fill up inputs carefully")
+            }
+        
+        }   
+        
 function monthlySavings(arr , livingCost) {
             let incomeOverLimit=[];
             let incomeUnderLimit=[];
             let totalincome=0;
                
-          if(Array.isArray(array) === true && typeof livingCost=== "number" ){
-            for(const income of array){
+          if(Array.isArray(arr) === true && typeof livingCost=== "number" ){
+            for(const income of arr){
         
                 if (typeof income==="number" && income>=3000){
                     const afterBankCharge= (income- (income/100*20))
@@ -120,4 +121,4 @@ function monthlySavings(arr , livingCost) {
             }
             
           }  
-                  
+          
