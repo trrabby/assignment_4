@@ -1,13 +1,11 @@
-const array= [ 900 , 2700 , 3400];
-const livingCost=10000;
 
 function monthlySavings(arr , livingCost) {
     let incomeOverLimit=[];
     let incomeUnderLimit=[];
     let totalincome=0;
        
-  if(Array.isArray(array) === true && typeof livingCost=== "number" ){
-    for(const income of array){
+  if(Array.isArray(arr) === true && typeof livingCost=== "number" ){
+    for(const income of arr){
 
         if (typeof income==="number" && income>=3000){
             const afterBankCharge= (income- (income/100*20))
@@ -43,6 +41,10 @@ function monthlySavings(arr , livingCost) {
     
   }  
   
-  const result=monthlySavings(array, livingCost)
-  console.log(result)
+  console.log(monthlySavings([10000, 50000, 3000], 50000))
+// const array= [ 900 , 2700 , 3400];
+// // const livingCost=10000;
+
+// //   const result=monthlySavings(array, livingCost)
+//   console.log(result)
     

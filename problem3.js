@@ -1,8 +1,6 @@
-let arrayNames= {num: [ 1 , 2 , 3 ]};
-let sortedArray=[];
-  
-function deleteInvalids(array) {
-    
+ 
+function deleteInvalids(arrayNames) {
+    let sortedArray=[];   
     
     if(Array.isArray(arrayNames)===true){
         let newArray = arrayNames.filter(value => !Number.isNaN(value))
@@ -21,8 +19,9 @@ function deleteInvalids(array) {
         return("Invalid Array. Provide an Array")
     }
 
-
     }
+// let arrayNames= {num: [ 1 , 2 , 3 ]};
+// const result= deleteInvalids(arrayNames)
+// console.log(result)
 
-const result= deleteInvalids(sortedArray)
-console.log(result)
+console.log(deleteInvalids([NaN, null, 10, 100, "towfiq"]));

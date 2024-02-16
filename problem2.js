@@ -21,8 +21,8 @@ function checkName(name) {
    
     }
     
-    const goodOrBad= checkName("TANVIRE")
-    console.log(goodOrBad)
+    // const goodOrBad= checkName("TANVIRE")
+    console.log(checkName("salman"))
 
 
 
