@@ -15,6 +15,7 @@ function calculateMoney(ticketSale ){
     
 }   
 
+
 function checkName(name) {
     if (typeof name === "string"){
         let lastWord= name.split('').pop();
@@ -33,15 +34,14 @@ function checkName(name) {
     else if(typeof name === "number" || typeof name === "object" ){
         return("Please insert a name. Which must be a string.");
     }
-   
-   
-    }
+   }
+
     
-function deleteInvalids(arrayNames) {
+function deleteInvalids(array) {
         let sortedArray=[];   
         
-        if(Array.isArray(arrayNames)===true){
-            let newArray = arrayNames.filter(value => !Number.isNaN(value))
+        if(Array.isArray(array)===true){
+            let newArray = array.filter(value => !Number.isNaN(value))
             newArray= newArray.filter(sortedArray=> {return sortedArray !== null;})
     
             for (const sigment of newArray){
@@ -56,8 +56,9 @@ function deleteInvalids(arrayNames) {
         else{
             return("Invalid Array. Provide an Array")
         }
+    }   
+
     
-        }    
 
 function password(obj) {
 
@@ -77,8 +78,8 @@ function password(obj) {
             else {
                 return ("Invalid. Pl fill up inputs carefully")
             }
-        
         }   
+
         
 function monthlySavings(arr , livingCost) {
             let incomeOverLimit=[];
@@ -119,6 +120,6 @@ function monthlySavings(arr , livingCost) {
             else{
                 return("Invalid Input.")
             }
-            
-          }  
+        }  
+
           
